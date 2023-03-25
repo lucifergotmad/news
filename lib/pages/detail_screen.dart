@@ -17,6 +17,12 @@ class _DetailScreenState extends State<DetailScreen> {
   final TextEditingController _commentController = TextEditingController();
 
   @override
+  void dispose() {
+    _commentController.dispose();
+    super.dispose();
+  }
+
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
